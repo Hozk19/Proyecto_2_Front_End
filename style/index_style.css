@@ -1,0 +1,26 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+.nav-principal{
+    display: flex;
+    justify-content: space-between;
+}
+.secciones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 80vh ;
+}

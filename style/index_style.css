@@ -1,3 +1,12 @@
+:root{
+    --verydarkblue: #0d2330;
+    --darkblue: #112B3C;
+    --middleblue:#17405e;
+    --lightblue: #205375;
+    --ultralightblue: #296994;
+    --orange: #F66B0E;
+    --white: #EFEFEF;
+}
 *{
     margin:0;
     padding: 0;
@@ -5,24 +14,115 @@
 body{
     width: 100vw;
     height: 100vh;
+    box-sizing: border-box;
     display: grid;
-    grid-template-columns: 90px auto;
+    grid-template-columns: 100px auto;
     grid-template-rows: repeat(2,60px) auto;
     grid-template-areas:    "header header"
                             "nav nav"
                             "menu content";
+    background-color: var(--darkblue);
 }
 header{
     grid-area: header;
     display: flex;
     justify-content: space-between;
+    padding: 10px;
+    border: 1px solid  var(--lightblue);
 }
 nav{
     grid-area: nav;
-    justify-self: center;
+    grid-column-start: 2;
+    margin: 10px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+.categorias{
+    background-color: var(--middleblue);
+    padding: 8px;
+    border-radius: 12px;
+    border: 1px solid var(--lightblue);
+}
+#Todo a{
+    color: var(--darkblue);
+}
+#Todo {
+    background-color: var(--white);
 }
 aside{
     grid-area: menu;
     grid-row-start: 2;
-
+    grid-column-start: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.section-1, .section-2, .section-3{
+    display: flex;
+    gap: 10px;
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+button{
+    background-color: var(--darkblue);
+    border: none;
+}
+nav button:hover{
+    background-color: var(--ultralightblue) ;
+}
+aside button:hover{
+    background-color: var(--ultralightblue) ;
+}
+.menu{
+    background-color: var(--darkblue);
+    border: none;
+}
+.material-symbols-outlined, .logo, p{
+    color: var(--white);
+}
+.left-button{
+    width: 100px;
+    padding: 10px;
+}
+#play {
+    background-color: var(--orange);
+    border-radius: 10px;
+    width: 40px;
+}
+.section-1 button a {
+    display: flex;
+    gap: 5px;
+}
+#letra-logo{
+    margin-top: 5px;
+}
+input{
+    width: 20rem;
+    background-color: var(--verydarkblue);
+    outline: var(--verydarkblue);
+}
+form{
+    display: flex;
+}
+.section-2{
+    width: 30rem;
+    justify-content: center;
+    gap: 20px;
+}
+.search{
+    background-color: var(--middleblue);
+    width: 50px;
+}
+.mic{
+    background-color: var(--verydarkblue);
+    width: 40px;
+    border-radius: 100%;
+}
+main{
+    border-top: 1px solid var(--lightblue);
+    background-color: var(--verydarkblue);
 }

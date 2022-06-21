@@ -10,6 +10,7 @@
 *{
     margin:0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     width: 100vw;
@@ -125,3 +126,62 @@ main{
     border-top: 1px solid var(--lightblue);
     background-color: var(--verydarkblue);
 }
+.menu label{
+    cursor: pointer;
+}
+aside input{
+    display: none;
+}
+.container{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100vw;
+    height: 100vh;
+    top:0; 
+    left: 0;
+    transition: all 150ms ease;
+    visibility: hidden;
+}
+#btn-menu:checked ~ .container{
+    visibility: visible;
+}
+.container-menu{
+    width: 100vw;
+    max-width: 250px;
+    height: 100vh;
+    background-color: var(--darkblue);
+    position: absolute;
+    transition: all 150ms ease;
+    transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container .container-menu{
+    transform: translateX(0%);
+    transition: all 150ms ease;
+}
+.container-menu nav {
+    transform: translateY(15%);
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    margin-right:0 ;
+}
+.container-menu nav a{
+    padding: 10px;
+
+}
+.container-menu label {
+    position:absolute;
+    left: 12px;
+    top: 17px;
+    cursor: pointer;
+}
+.nav-button a{
+    display: flex;
+    gap: 20px;
+    margin-left: 15px;
+}
+.division{
+    border-bottom: 1px solid var(--lightblue);
+    width: 95%;
+}
+

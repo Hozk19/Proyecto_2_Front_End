@@ -184,4 +184,81 @@ aside input{
     border-bottom: 1px solid var(--lightblue);
     width: 95%;
 }
-
+main{
+    display: flex;
+    flex-direction: column;
+}
+.videos{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+.info{
+    display: grid;
+    grid-template-areas:  "image title"
+                "user user"
+                "texto texto";
+    grid-template-columns: 30px auto;
+    margin-top: 15px;
+}
+.user-image{
+    grid-area: image;
+    margin-left: 5px;
+}
+.user-image img {
+    border-radius: 50%;
+}
+.title, .user, .texto{
+    display: flex;
+    padding: 5px;
+    margin-left: 5px;
+}
+.title{
+    grid-area: title;
+    font-weight: bold;
+    color: var(--white);
+}
+.user{
+    grid-area: user;
+    grid-column-start: 2;
+    gap: 8px;
+}
+.texto{
+    grid-area: texto;
+    grid-column-start: 2;
+    gap:5px;
+}
+.video, .video-container{
+    width:349px ;
+    cursor: pointer;
+}
+.video{
+    height:196.71px ;
+}
+.video video{
+    display: none;
+    width:349px;
+    height:196.71px ;
+}
+.video img{
+    width: 100%;
+}
+.user p {
+    margin-top: 3px;
+}
+.user, .texto{
+    font-size: small;
+}
+.video:hover img {
+    display: none;
+}
+.video:hover video{
+    display: block;
+}
+.video-container:hover{
+    transform: scale(1.3);
+    transition: 1s;
+    transition-delay: 1s;
+    background-color: #112B3C;
+}

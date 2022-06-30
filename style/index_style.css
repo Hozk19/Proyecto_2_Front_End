@@ -178,6 +178,19 @@ aside input{
     top: 17px;
     cursor: pointer;
 }
+.container-menu .logo-2{
+    position:absolute;
+    left: 45px;
+    top: 17px;
+    cursor: pointer;
+}
+.container-menu .logo-2 a{
+    display: flex;
+    gap: 5px;
+}
+.container-menu .logo-2 a:hover{
+    background-color: var(--darkblue);
+}
 .nav-button a{
     display: flex;
     gap: 20px;
